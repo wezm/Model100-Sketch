@@ -1,4 +1,3 @@
-// -*- mode: c++ -*-
 // Copyright 2016-2022 Keyboardio, inc. <jesse@keyboard.io>
 // See "LICENSE" for license details
 
@@ -56,6 +55,9 @@
 
 // Support for shared palettes for other plugins, like Colormap below
 #include "Kaleidoscope-LED-Palette-Theme.h"
+
+// Support for indicating active modifiers via LED
+#include <Kaleidoscope-LED-ActiveModColor.h>
 
 // Support for an LED mode that lets one configure per-layer color maps
 #include "Kaleidoscope-Colormap.h"
@@ -366,13 +368,14 @@ const macro_t *macroAction(uint8_t macro_id, KeyEvent &event) {
 // Keyboardio Model 100.
 
 
-static kaleidoscope::plugin::LEDSolidColor solidRed(160, 0, 0);
-static kaleidoscope::plugin::LEDSolidColor solidOrange(140, 70, 0);
-static kaleidoscope::plugin::LEDSolidColor solidYellow(130, 100, 0);
-static kaleidoscope::plugin::LEDSolidColor solidGreen(0, 160, 0);
-static kaleidoscope::plugin::LEDSolidColor solidBlue(0, 70, 130);
-static kaleidoscope::plugin::LEDSolidColor solidIndigo(0, 0, 170);
-static kaleidoscope::plugin::LEDSolidColor solidViolet(130, 0, 120);
+//static kaleidoscope::plugin::LEDSolidColor solidRed(160, 0, 0);
+//static kaleidoscope::plugin::LEDSolidColor solidOrange(140, 70, 0);
+//static kaleidoscope::plugin::LEDSolidColor solidYellow(130, 100, 0);
+//static kaleidoscope::plugin::LEDSolidColor solidGreen(0, 160, 0);
+//static kaleidoscope::plugin::LEDSolidColor solidBlue(0, 70, 130);
+//static kaleidoscope::plugin::LEDSolidColor solidIndigo(0, 0, 170);
+//static kaleidoscope::plugin::LEDSolidColor solidViolet(130, 0, 120);
+static kaleidoscope::plugin::LEDSolidColor solidWhite(130, 130, 130);
 
 /** toggleLedsOnSuspendResume toggles the LEDs off when the host goes to sleep,
  * and turns them back on when it wakes up.
@@ -467,8 +470,8 @@ KALEIDOSCOPE_INIT_PLUGINS(
   // SpaceCadet can turn your shifts into parens on tap, while keeping them as
   // Shifts when held. SpaceCadetConfig lets Chrysalis configure some aspects of
   // the plugin.
-  SpaceCadet,
-  SpaceCadetConfig,
+  //SpaceCadet,
+  //SpaceCadetConfig,
 
   // Focus allows bi-directional communication with the host, and is the
   // interface through which the keymap in EEPROM can be edited.
@@ -510,13 +513,14 @@ KALEIDOSCOPE_INIT_PLUGINS(
   LEDChaseEffect,
 
   // These static effects turn your keyboard's LEDs a variety of colors
-  solidRed,
-  solidOrange,
-  solidYellow,
-  solidGreen,
-  solidBlue,
-  solidIndigo,
-  solidViolet,
+  //solidRed,
+  //solidOrange,
+  //solidYellow,
+  //solidGreen,
+  //solidBlue,
+  //solidIndigo,
+  //solidViolet,
+  solidWhite,
 
   // The breathe effect slowly pulses all of the LEDs on your keyboard
   LEDBreatheEffect,
@@ -592,7 +596,9 @@ KALEIDOSCOPE_INIT_PLUGINS(
 
   // Enables the GeminiPR Stenography protocol. Unused by default, but with the
   // plugin enabled, it becomes configurable - and then usable - via Chrysalis.
-  GeminiPR);
+  //GeminiPR,
+  
+  ActiveModColorEffect);
 
 /** The 'setup' function is one of the two standard Arduino sketch functions.
  * It's called when your keyboard first powers up. This is where you set up
@@ -610,8 +616,8 @@ void setup() {
   // needs to be explicitly told which keymap layer is your numpad layer
   NumPad.numPadLayer = NUMPAD;
 
-  // We configure the AlphaSquare effect to use RED letters
-  AlphaSquare.color = CRGB(255, 0, 0);
+  // We configure the AlphaSquare effect to use Violet letters
+  AlphaSquare.color = CRGB(130, 0, 120);
 
   // We set the brightness of the rainbow effects to 150 (on a scale of 0-255)
   // This draws more than 500mA, but looks much nicer than a dimmer effect
