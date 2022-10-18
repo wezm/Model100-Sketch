@@ -87,10 +87,9 @@
         "categories": ["oneshot", "modifier"]
       },
       {
-        "code": 230,
-        "label": {"base": {"full": "AltGr", "1u": "AGr"}},
-        "location": "right",
-        "categories": ["modifier"]
+        "code": 53630,
+        "label": {"hint": {"full": "OneShot", "1u": "OS"}, "base": "Cancel"},
+        "categories": ["oneshot"]
       },
       {"code": 11, "label": {"base": "h", "shifted": "H"}},
       {"code": 13, "label": {"base": "j", "shifted": "J"}},
