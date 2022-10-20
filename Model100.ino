@@ -666,6 +666,12 @@ void setup() {
   // firmware starts with LED effects off. This avoids over-taxing devices that
   // don't have a lot of power to share with USB devices
   DefaultLEDModeConfig.activateLEDModeIfUnconfigured(&LEDOff);
+
+  // Increase OneShot timeout from default of 2.5s
+  OneShot.setTimeout(3000);
+
+  // Require quickly double tapping to lock one shot key
+  OneShot.setDoubleTapTimeout(500);
 }
 
 /** loop is the second of the standard Arduino sketch functions.
