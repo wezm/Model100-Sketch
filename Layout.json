@@ -57,7 +57,11 @@
       {"code": 43, "label": {"base": "Tab"}},
       {"code": 42, "label": {"base": {"full": "Backspace", "1u": "Bksp"}}},
       {"code": 44, "label": {"base": "Space"}},
-      {"code": 40, "label": {"base": "Enter"}},
+      {
+        "code": 65535,
+        "label": {"base": {"full": "Transparent", "1u": " "}},
+        "categories": ["blanks"]
+      },
       {"code": 28, "label": {"base": "y", "shifted": "Y"}},
       {"code": 24, "label": {"base": "u", "shifted": "U"}},
       {"code": 12, "label": {"base": "i", "shifted": "I"}},
@@ -408,7 +412,7 @@
       {"code": 60, "label": {"base": "F3"}},
       {"code": 61, "label": {"base": "F4"}},
       {"code": 62, "label": {"base": "F5"}},
-      {"code": 57, "label": {"base": {"full": "Caps Lock", "1u": "CpLK"}}},
+      {"code": 57, "label": {"base": {"full": "Caps Lock", "1u": "Caps"}}},
       {
         "code": 65535,
         "label": {"base": {"full": "Transparent", "1u": " "}},
@@ -456,26 +460,18 @@
         "categories": ["mousekeys"]
       },
       {
-        "code": 20576,
-        "label": {"hint": {"full": "Mouse Warp", "1u": "Warp"}, "base": "End"},
-        "categories": ["mousekeys"]
+        "code": 65535,
+        "label": {"base": {"full": "Transparent", "1u": " "}},
+        "categories": ["blanks"]
       },
       {
-        "code": 20521,
-        "label": {
-          "hint": {"full": "Mouse Warp", "1u": "Warp"},
-          "base": {"full": "North-East", "1u": "NE"}
-        },
-        "categories": ["mousekeys"]
+        "code": 65535,
+        "label": {"base": {"full": "Transparent", "1u": " "}},
+        "categories": ["blanks"]
       },
       {"code": 76, "label": {"base": {"full": "Delete", "1u": "Del"}}},
       {"code": 40, "label": {"base": "Enter"}},
-      {
-        "code": 18637,
-        "legacyCode": 22733,
-        "label": {"base": {"full": "Play / pause", "1u": "⏯"}},
-        "categories": ["consumer"]
-      },
+      {"code": 40, "label": {"base": "Enter"}},
       {
         "code": 18613,
         "legacyCode": 22709,
@@ -522,20 +518,14 @@
         "categories": ["mousekeys"]
       },
       {
-        "code": 20517,
-        "label": {
-          "hint": {"full": "Mouse Warp", "1u": "Warp"},
-          "base": {"full": "North-West", "1u": "NW"}
-        },
-        "categories": ["mousekeys"]
+        "code": 65535,
+        "label": {"base": {"full": "Transparent", "1u": " "}},
+        "categories": ["blanks"]
       },
       {
-        "code": 20522,
-        "label": {
-          "hint": {"full": "Mouse Warp", "1u": "Warp"},
-          "base": {"full": "South-East", "1u": "SE"}
-        },
-        "categories": ["mousekeys"]
+        "code": 65535,
+        "label": {"base": {"full": "Transparent", "1u": " "}},
+        "categories": ["blanks"]
       },
       {
         "code": 65535,
@@ -553,9 +543,10 @@
       {"code": 82, "label": {"base": {"full": "Up Arrow", "1u": "↑"}}},
       {"code": 79, "label": {"base": {"full": "Right Arrow", "1u": "→"}}},
       {
-        "code": 65535,
-        "label": {"base": {"full": "Transparent", "1u": " "}},
-        "categories": ["blanks"]
+        "code": 2099,
+        "label": {"hint": null, "base": ":"},
+        "categories": ["with-modifiers", "shift"],
+        "baseCode": 51
       },
       {
         "code": 65535,
@@ -579,12 +570,9 @@
         "categories": ["mousekeys"]
       },
       {
-        "code": 20518,
-        "label": {
-          "hint": {"full": "Mouse Warp", "1u": "Warp"},
-          "base": {"full": "South-West", "1u": "SW"}
-        },
-        "categories": ["mousekeys"]
+        "code": 65535,
+        "label": {"base": {"full": "Transparent", "1u": " "}},
+        "categories": ["blanks"]
       },
       {
         "code": 65535,
@@ -631,9 +619,10 @@
         "categories": ["consumer"]
       },
       {
-        "code": 65535,
-        "label": {"base": {"full": "Transparent", "1u": " "}},
-        "categories": ["blanks"]
+        "code": 18637,
+        "legacyCode": 22733,
+        "label": {"base": {"full": "Play / pause", "1u": "⏯"}},
+        "categories": ["consumer"]
       },
       {"code": 49, "label": {"base": "\\", "shifted": "|"}},
       {
