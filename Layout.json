@@ -13,22 +13,16 @@
         "categories": ["ledkeys"]
       },
       {
-        "code": 49154,
-        "label": {
-          "hint": {"full": "OneShot", "1u": "OSM"},
-          "base": {"full": "Left Shift", "1u": "LSft"}
-        },
-        "rangeStart": 49153,
-        "categories": ["oneshot", "modifier"]
+        "code": 225,
+        "label": {"base": "Shift"},
+        "location": "left",
+        "categories": ["modifier"]
       },
       {
-        "code": 49158,
-        "label": {
-          "hint": {"full": "OneShot", "1u": "OSM"},
-          "base": {"full": "Right Shift", "1u": "RSft"}
-        },
-        "rangeStart": 49153,
-        "categories": ["oneshot", "modifier"]
+        "code": 229,
+        "label": {"base": "Shift"},
+        "location": "right",
+        "categories": ["modifier"]
       },
       {
         "code": 24577,
@@ -76,19 +70,16 @@
       {"code": 10, "label": {"base": "g", "shifted": "G"}},
       {"code": 44, "label": {"base": "Space"}},
       {
-        "code": 49156,
-        "label": {
-          "hint": {"full": "OneShot", "1u": "OSM"},
-          "base": {"full": "Left Super", "1u": "LSup."}
-        },
-        "rangeStart": 49153,
-        "categories": ["oneshot", "modifier"]
+        "code": 227,
+        "label": {"base": {"full": "Super", "1u": "Sup.", "short": "Su"}},
+        "location": "left",
+        "categories": ["modifier"]
       },
       {
-        "code": 49155,
-        "label": {"hint": {"full": "OneShot", "1u": "OSM"}, "base": "Alt"},
-        "rangeStart": 49153,
-        "categories": ["oneshot", "modifier"]
+        "code": 230,
+        "label": {"base": {"full": "AltGr", "1u": "AGr"}},
+        "location": "right",
+        "categories": ["modifier"]
       },
       {
         "code": 53630,
@@ -108,36 +99,30 @@
       {"code": 25, "label": {"base": "v", "shifted": "V"}},
       {"code": 5, "label": {"base": "b", "shifted": "B"}},
       {
-        "code": 49163,
-        "label": {"hint": {"full": "OneShot", "1u": "OSL"}, "base": "#2"},
+        "code": 17452,
+        "label": {"hint": "ShiftTo", "base": "#2"},
         "target": 2,
-        "rangeStart": 49161,
-        "categories": ["layer", "oneshot"]
+        "rangeStart": 17450,
+        "categories": ["layer", "shifttolayer"]
       },
       {
-        "code": 49153,
-        "label": {
-          "hint": {"full": "OneShot", "1u": "OSM"},
-          "base": {"full": "Left Control", "1u": "LCtrl"}
-        },
-        "rangeStart": 49153,
-        "categories": ["oneshot", "modifier"]
+        "code": 224,
+        "label": {"base": {"full": "Control", "1u": "Ctrl"}},
+        "location": "left",
+        "categories": ["modifier"]
       },
       {
-        "code": 49157,
-        "label": {
-          "hint": {"full": "OneShot", "1u": "OSM"},
-          "base": {"full": "Right Control", "1u": "RCtrl"}
-        },
-        "rangeStart": 49153,
-        "categories": ["oneshot", "modifier"]
+        "code": 228,
+        "label": {"base": {"full": "Control", "1u": "Ctrl"}},
+        "location": "right",
+        "categories": ["modifier"]
       },
       {
-        "code": 49163,
-        "label": {"hint": {"full": "OneShot", "1u": "OSL"}, "base": "#2"},
+        "code": 17452,
+        "label": {"hint": "ShiftTo", "base": "#2"},
         "target": 2,
-        "rangeStart": 49161,
-        "categories": ["layer", "oneshot"]
+        "rangeStart": 17450,
+        "categories": ["layer", "shifttolayer"]
       },
       {"code": 17, "label": {"base": "n", "shifted": "N"}},
       {"code": 16, "label": {"base": "m", "shifted": "M"}},
