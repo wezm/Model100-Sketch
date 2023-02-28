@@ -74,7 +74,7 @@
       {"code": 7, "label": {"base": "d", "shifted": "D"}},
       {"code": 9, "label": {"base": "f", "shifted": "F"}},
       {"code": 10, "label": {"base": "g", "shifted": "G"}},
-      {"code": 41, "label": {"base": "Esc"}},
+      {"code": 44, "label": {"base": "Space"}},
       {
         "code": 49156,
         "label": {
@@ -470,7 +470,7 @@
         "categories": ["blanks"]
       },
       {"code": 76, "label": {"base": {"full": "Delete", "1u": "Del"}}},
-      {"code": 40, "label": {"base": "Enter"}},
+      {"code": 42, "label": {"base": {"full": "Backspace", "1u": "Bksp"}}},
       {"code": 40, "label": {"base": "Enter"}},
       {
         "code": 18613,
@@ -522,11 +522,7 @@
         "label": {"base": {"full": "Transparent", "1u": " "}},
         "categories": ["blanks"]
       },
-      {
-        "code": 65535,
-        "label": {"base": {"full": "Transparent", "1u": " "}},
-        "categories": ["blanks"]
-      },
+      {"code": 40, "label": {"base": "Enter"}},
       {
         "code": 65535,
         "label": {"base": {"full": "Transparent", "1u": " "}},
